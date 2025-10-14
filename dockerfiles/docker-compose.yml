@@ -1,0 +1,15 @@
+
+
+services:
+  turtlebot3:
+    build:
+      context: ..
+      dockerfile: dockerfiles/Dockerfile
+    container_name: turtlebot3
+    volumes:
+      - "../:/root/catkin_ws/src/"
+    privileged: True
+    network_mode: host
+    tty: True
+    stdin_open: True
+    command: bash 
